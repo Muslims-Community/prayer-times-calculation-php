@@ -1,4 +1,4 @@
-# Prayer Times Calculation Package for PHP
+# Prayer Times Calculation Package for PHP 
 
 A minimalist and offline prayer times calculation package for PHP, supporting Laravel and other PHP frameworks.
 

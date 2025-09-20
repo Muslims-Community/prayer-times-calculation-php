@@ -1,9 +1,12 @@
 # Prayer Times Calculation Package for PHP 
 
-A minimalist and offline prayer times calculation package for PHP, supporting Laravel and other PHP frameworks.
-
+[![Latest Stable Version](https://poser.pugx.org/muslims-community/prayer-times-calculation/v/stable)](https://packagist.org/packages/muslims-community/prayer-times-calculation)
+[![Total Downloads](https://poser.pugx.org/muslims-community/prayer-times-calculation/downloads)](https://packagist.org/packages/muslims-community/prayer-times-calculation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PHP Version](https://img.shields.io/badge/PHP-%3E%3D8.0-blue)](https://php.net)
+[![Tests](https://github.com/Muslims-Community/prayer-times-calculation-php/workflows/tests/badge.svg)](https://github.com/Muslims-Community/prayer-times-calculation-php/actions)
+
+A minimalist and offline prayer times calculation package for PHP, supporting Laravel and other PHP frameworks. Calculate accurate Islamic prayer times using astronomical algorithms without requiring internet connectivity.
 
 ## Features
 
@@ -78,12 +81,17 @@ $prayerTimes = new PrayerTimesSDK(
 // Get prayer times
 $times = $prayerTimes->getTimes();
 
+// Display prayer times
+echo "Prayer Times for Makkah:\n";
 echo "Fajr: " . $times->fajr . "\n";
 echo "Sunrise: " . $times->sunrise . "\n";
 echo "Dhuhr: " . $times->dhuhr . "\n";
 echo "Asr: " . $times->asr . "\n";
 echo "Maghrib: " . $times->maghrib . "\n";
 echo "Isha: " . $times->isha . "\n";
+
+// Convert to array for JSON API responses
+$timesArray = $times->toArray();
 ```
 
 ### Laravel Usage with Facade
@@ -227,6 +235,34 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [Mahmoud Alsamman](https://github.com/mahmoudalsaman)
 - Based on the TypeScript version of the prayer times calculation library
 
+## Documentation
+
+For comprehensive documentation, examples, and API reference, see:
+- 📖 [Full Documentation](DOCUMENTATION.md)
+- 🚀 [Quick Start Guide](#usage)
+- 🔧 [API Reference](DOCUMENTATION.md#api-reference)
+
+## Roadmap
+
+- [ ] Add support for Qibla direction calculation
+- [ ] Implement sunrise/sunset calculation for specific locations
+- [ ] Add hijri date conversion utilities
+- [ ] Create web-based prayer times widget
+- [ ] Add more regional calculation methods
+
+## Community
+
+Join our community and stay updated:
+
+- 🌟 [Star us on GitHub](https://github.com/Muslims-Community/prayer-times-calculation-php)
+- 🐛 [Report Issues](https://github.com/Muslims-Community/prayer-times-calculation-php/issues)
+- 💬 [Discussions](https://github.com/Muslims-Community/prayer-times-calculation-php/discussions)
+- 📦 [Packagist Package](https://packagist.org/packages/muslims-community/prayer-times-calculation)
+
 ## Support
 
-For support, please open an issue on GitHub or contact the maintainers.
+For support, please:
+- 📖 Check the [documentation](DOCUMENTATION.md) first
+- 🔍 Search [existing issues](https://github.com/Muslims-Community/prayer-times-calculation-php/issues)
+- 🆕 [Create a new issue](https://github.com/Muslims-Community/prayer-times-calculation-php/issues/new) if needed
+- 📧 Contact: memoibraheem1@gmail.com
